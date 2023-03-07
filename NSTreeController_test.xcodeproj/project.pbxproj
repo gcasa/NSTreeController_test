@@ -11,6 +11,7 @@
 		14A1756D29AE09C3001DB621 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14A1756C29AE09C3001DB621 /* Assets.xcassets */; };
 		14A1757029AE09C3001DB621 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14A1756E29AE09C3001DB621 /* MainMenu.xib */; };
 		14A1757229AE09C3001DB621 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A1757129AE09C3001DB621 /* main.m */; };
+		14A1757B29B12259001DB621 /* TreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A1757A29B12259001DB621 /* TreeNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,8 @@
 		14A1756F29AE09C3001DB621 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		14A1757129AE09C3001DB621 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		14A1757329AE09C3001DB621 /* NSTreeController_test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NSTreeController_test.entitlements; sourceTree = "<group>"; };
+		14A1757929B12259001DB621 /* TreeNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TreeNode.h; sourceTree = "<group>"; };
+		14A1757A29B12259001DB621 /* TreeNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TreeNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +62,8 @@
 				14A1756E29AE09C3001DB621 /* MainMenu.xib */,
 				14A1757129AE09C3001DB621 /* main.m */,
 				14A1757329AE09C3001DB621 /* NSTreeController_test.entitlements */,
+				14A1757929B12259001DB621 /* TreeNode.h */,
+				14A1757A29B12259001DB621 /* TreeNode.m */,
 			);
 			path = NSTreeController_test;
 			sourceTree = "<group>";
@@ -134,6 +139,7 @@
 			files = (
 				14A1757229AE09C3001DB621 /* main.m in Sources */,
 				14A1756B29AE09C0001DB621 /* AppDelegate.m in Sources */,
+				14A1757B29B12259001DB621 /* TreeNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
