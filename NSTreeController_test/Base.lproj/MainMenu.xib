@@ -12,7 +12,7 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <treeController childrenKeyPath="childNodes" countKeyPath="count" leafKeyPath="leaf" id="rsH-DC-Wv4">
+        <treeController childrenKeyPath="children" countKeyPath="count" leafKeyPath="leaf" id="rsH-DC-Wv4">
             <connections>
                 <binding destination="Voe-Tx-rLC" name="contentArray" keyPath="self.nodes" id="Au6-M4-dOz"/>
             </connections>

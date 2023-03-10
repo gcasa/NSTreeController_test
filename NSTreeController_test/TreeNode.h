@@ -9,10 +9,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TreeNode : NSObject
+@interface TreeNode : NSObject <NSCopying>
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSMutableArray *children;
+@property (nonatomic) BOOL leaf;
+@property (nonatomic) NSUInteger count;
 
 - (instancetype)initWithName:(NSString *)name;
 

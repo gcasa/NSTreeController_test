@@ -6,6 +6,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TreeNode.h"
 
 @interface AppDelegate ()
 
@@ -19,17 +20,23 @@
 
 - (NSArray *) buildNodes
 {
-    NSTreeNode *node = [[NSTreeNode alloc] initWithRepresentedObject: @"Root"];
+    TreeNode *node = [[TreeNode alloc] init];
+    node.name = @"Root";
+    node.leaf = NO;
     NSArray *array = [NSArray arrayWithObject: node];
-    NSTreeNode *child = [[NSTreeNode alloc] initWithRepresentedObject: @"Child"];
-    // node.mutableChildNodes = [NSArray arrayWithObject: child];
+    TreeNode *child = [[TreeNode alloc] init];
+    child.name = @"Child 0";
+    child.leaf = YES;
+    node.children = [NSMutableArray arrayWithObject: child];
+    node.count = [node.children count];
+    
     return array;
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
-    self.treeController.childrenKeyPath = @"childNodes";
-    self.treeController.leafKeyPath = @"leaf";
+    // self.treeController.childrenKeyPath = @"childNodes";
+    // self.treeController.leafKeyPath = @"leaf";
     self.nodes = [self buildNodes];
 }
 
