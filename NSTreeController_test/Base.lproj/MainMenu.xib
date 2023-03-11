@@ -720,6 +720,9 @@
                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                            <connections>
+                                                <binding destination="rsH-DC-Wv4" name="value" keyPath="arrangedObjects.value" id="3tN-CF-Bjx"/>
+                                            </connections>
                                         </tableColumn>
                                         <tableColumn identifier="AutomaticTableColumnIdentifier.1" width="293" minWidth="40" maxWidth="1000" id="PMP-nx-Ucv">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
@@ -732,6 +735,9 @@
                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                            <connections>
+                                                <binding destination="rsH-DC-Wv4" name="value" keyPath="arrangedObjects.count" id="EHO-ea-jT0"/>
+                                            </connections>
                                         </tableColumn>
                                     </tableColumns>
                                     <connections>

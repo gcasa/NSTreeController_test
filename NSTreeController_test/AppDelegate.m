@@ -21,11 +21,11 @@
 - (NSArray *) buildNodes
 {
     TreeNode *node = [[TreeNode alloc] init];
-    node.name = @"Root";
+    node.value = @"Root";
     node.leaf = NO;
     NSArray *array = [NSArray arrayWithObject: node];
     TreeNode *child = [[TreeNode alloc] init];
-    child.name = @"Child 0";
+    child.value = @"Child 0";
     child.leaf = YES;
     node.children = [NSMutableArray arrayWithObject: child];
     node.count = [node.children count];

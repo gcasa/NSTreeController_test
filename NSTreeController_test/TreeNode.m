@@ -9,10 +9,11 @@
 
 @implementation TreeNode
 
-- (instancetype)initWithName:(NSString *)name {
+- (instancetype) initWithValue:(NSString *)value
+{
     self = [super init];
     if (self) {
-        _name = name;
+        _value = value;
         _children = [NSMutableArray array];
         _leaf = NO;
     }
@@ -23,7 +24,7 @@
 {
     TreeNode *copy = [[TreeNode alloc] init];
     
-    copy.name = self.name;
+    copy.value = self.value;
     copy.children = [NSMutableArray arrayWithArray: self.children];
     copy.leaf = self.leaf;
     
