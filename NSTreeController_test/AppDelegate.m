@@ -38,15 +38,15 @@
   // self.treeController.childrenKeyPath = @"childNodes";
   // self.treeController.leafKeyPath = @"leaf";
   
-  NSTreeNode *testNode = [[NSTreeNode alloc] init];
-  NSTreeController *testController = [[NSTreeController alloc] initWithContent: testNode];
-  NSString *countPath = [testController countKeyPathForNode:testNode];
-  NSString *childPath = [testController childrenKeyPathForNode:testNode];
-  NSString *leafPath = [testController leafKeyPathForNode:testNode];
+  //NSTreeNode *testNode = [[NSTreeNode alloc] init];
+  //NSTreeController *testController = [[NSTreeController alloc] initWithContent: testNode];
+  //NSString *countPath = [self.treeController countKeyPathForNode:testNode];
+  //NSString *childPath = [self.treeController childrenKeyPathForNode:testNode];
+  //NSString *leafPath = [self.treeController leafKeyPathForNode:testNode];
   
-  NSLog(@"countPath = %@", countPath);
-  NSLog(@"childPath = %@", childPath);
-  NSLog(@"leafPath = %@", leafPath);
+  //NSLog(@"countPath = %@", countPath);
+  //NSLog(@"childPath = %@", childPath);
+  //NSLog(@"leafPath = %@", leafPath);
   
   self.nodes = [self buildNodes];
 }
