@@ -13,6 +13,7 @@
 @property (strong) IBOutlet NSWindow *window;
 @property (strong) IBOutlet NSTreeController *treeController;
 @property (strong) NSArray *nodes;
+@property (strong) IBOutlet NSOutlineView *ov;
 
 @end
 
@@ -61,5 +62,8 @@
     return YES;
 }
 
-
+- (IBAction) reload: (id)sender
+{
+    [self.ov reloadData];
+}
 @end
