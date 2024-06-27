@@ -84,7 +84,8 @@ void DumpObjcMethods(Class clz) {
     NSString *sc = NSStringFromClass([[self.treeController.arrangedObjects class] superclass]);
     NSLog(@"arrangedObjects = %@, className = %@, superClass = %@",
           self.treeController.arrangedObjects, cn, sc);
-    NSLog(@"representedObject = %@", self.treeController.arrangedObjects.representedObject);
+    NSLog(@"representedObject = %@, value = %@", self.treeController.arrangedObjects.representedObject,
+          self.treeController.arrangedObjects.representedObject.value);
     DumpObjcMethods([self.treeController.arrangedObjects class]);
 }
 
