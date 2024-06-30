@@ -51,17 +51,25 @@ void DumpObjcMethods(Class clz) {
 
 - (NSArray *) buildNodes
 {
-  TreeNode *node = [[TreeNode alloc] init];
-  node.value = @"Root";
-  node.leaf = NO;
-  NSArray *array = [NSArray arrayWithObject: node];
-  TreeNode *child = [[TreeNode alloc] init];
-  child.value = @"Child 0";
-  child.leaf = YES;
-  node.children = [NSMutableArray arrayWithObject: child];
-  node.count = [node.children count];
+    TreeNode *node = [[TreeNode alloc] init];
+    node.value = @"Root";
+    node.leaf = NO;
+    NSArray *array = [NSArray arrayWithObject: node];
   
-  return array;
+    TreeNode *child = [[TreeNode alloc] init];
+    child.value = @"Child 0";
+    child.leaf = NO;
+    node.children = [NSMutableArray arrayWithObject: child];
+    node.count = [node.children count];
+
+    TreeNode *newChild0 = [[TreeNode alloc] init];
+    newChild0.value = @"Subchild 0";
+    newChild0.leaf = YES;
+    child.children = [NSMutableArray arrayWithObject: newChild0];
+    child.count = [child.children count];
+    newChild0.count = 0;
+    
+    return array;
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
