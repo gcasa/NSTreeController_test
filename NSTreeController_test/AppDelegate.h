@@ -10,6 +10,7 @@
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
 - (IBAction) reload: (id)sender;
+- (IBAction) add: (id)sender;
 
 @end
 

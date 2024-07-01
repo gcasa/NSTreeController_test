@@ -111,4 +111,10 @@ void DumpObjcMethods(Class clz) {
 {
     [self.ov reloadData];
 }
+
+- (IBAction) add: (id)sender
+{
+    [self.treeController add: sender];
+}
+
 @end
