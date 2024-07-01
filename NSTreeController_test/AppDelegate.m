@@ -42,8 +42,9 @@ void DumpObjcMethods(Class clz) {
 
 @property (strong) IBOutlet NSWindow *window;
 @property (strong) IBOutlet NSTreeController *treeController;
-@property (strong) NSArray *nodes;
 @property (strong) IBOutlet NSOutlineView *ov;
+
+@property (strong) NSArray *nodes;
 
 @end
 
@@ -72,28 +73,16 @@ void DumpObjcMethods(Class clz) {
     return array;
 }
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-  // Insert code here to initialize your application
-  // self.treeController.childrenKeyPath = @"childNodes";
-  // self.treeController.leafKeyPath = @"leaf";
-  
-  //NSTreeNode *testNode = [[NSTreeNode alloc] init];
-  //NSTreeController *testController = [[NSTreeController alloc] initWithContent: testNode];
-  //NSString *countPath = [self.treeController countKeyPathForNode:testNode];
-  //NSString *childPath = [self.treeController childrenKeyPathForNode:testNode];
-  //NSString *leafPath = [self.treeController leafKeyPathForNode:testNode];
-  
-  //NSLog(@"countPath = %@", countPath);
-  //NSLog(@"childPath = %@", childPath);
-  //NSLog(@"leafPath = %@", leafPath);
-  
-  self.nodes = [self buildNodes];
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification 
+{
+    self.nodes = [self buildNodes];
     NSString *cn = [self.treeController.arrangedObjects className];
     NSString *sc = NSStringFromClass([[self.treeController.arrangedObjects class] superclass]);
     NSLog(@"arrangedObjects = %@, className = %@, superClass = %@",
           self.treeController.arrangedObjects, cn, sc);
     NSLog(@"representedObject = %@" /*, value = %@" */, self.treeController.arrangedObjects.representedObject); // ,
           // self.treeController.arrangedObjects.representedObject.value);
+    NSLog(@"objectClassName = %@", [self.treeController objectClass]);
     DumpObjcMethods([self.treeController.arrangedObjects class]);
 }
 
@@ -115,6 +104,8 @@ void DumpObjcMethods(Class clz) {
 - (IBAction) add: (id)sender
 {
     [self.treeController add: sender];
+    NSLog(@"representedObject = %@", self.treeController.arrangedObjects.representedObject);
+    NSLog(@"childNodes = %@", self.treeController.arrangedObjects.childNodes);
 }
 
 @end
