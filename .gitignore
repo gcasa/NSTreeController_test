@@ -4,3 +4,4 @@ NSTreeController_test.xcodeproj/project.xcworkspace/xcuserdata/heron.xcuserdatad
 *.xcuserstate
 *.xcuserdatad
 xcuserdata
+.DS_Store
