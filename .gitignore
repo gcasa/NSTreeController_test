@@ -1,2 +1,6 @@
 *.xcuserdata
 build
+NSTreeController_test.xcodeproj/project.xcworkspace/xcuserdata/heron.xcuserdatad/UserInterfaceState.xcuserstate
+*.xcuserstate
+*.xcuserdatad
+xcuserdata
