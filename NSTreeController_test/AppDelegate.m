@@ -108,4 +108,9 @@ void DumpObjcMethods(Class clz) {
     NSLog(@"childNodes = %@", self.treeController.arrangedObjects.childNodes);
 }
 
+- (IBAction) addChild: (id)sender
+{
+    [self.treeController addChild: sender];
+}
+
 @end

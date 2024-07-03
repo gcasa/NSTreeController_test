@@ -11,6 +11,7 @@
 
 - (IBAction) reload: (id)sender;
 - (IBAction) add: (id)sender;
+- (IBAction) addChild: (id)sender;
 
 @end
 
