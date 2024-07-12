@@ -117,4 +117,14 @@ void DumpObjcMethods(Class clz) {
     [self.treeController addChild: sender];
 }
 
+- (IBAction) addIndex: (id)sender
+{
+    NSUInteger indexes[2] = {0,1};
+    NSIndexPath *path = [NSIndexPath indexPathWithIndexes: indexes length: 2];
+    TreeNode *node = [[TreeNode alloc] init];
+    
+    node.value = @"Test";
+    [self.treeController insertObject: node atArrangedObjectIndexPath: path];
+}
+
 @end

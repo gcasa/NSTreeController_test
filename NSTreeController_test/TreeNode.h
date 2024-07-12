@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSMutableArray *children;
 @property (nonatomic) BOOL leaf;
 @property (nonatomic) NSUInteger count;
+@property (nonatomic) BOOL isEnabled;
 
 - (instancetype)initWithValue:(NSString *)value;
 
