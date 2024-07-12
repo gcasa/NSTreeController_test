@@ -13,6 +13,8 @@
 - (IBAction) add: (id)sender;
 - (IBAction) addChild: (id)sender;
 - (IBAction) addIndex: (id)sender;
+- (IBAction) remove: (id)sender;
+- (IBAction) removeIndex: (id)sender;
 
 @end
 

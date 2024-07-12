@@ -127,4 +127,15 @@ void DumpObjcMethods(Class clz) {
     [self.treeController insertObject: node atArrangedObjectIndexPath: path];
 }
 
+- (IBAction) remove: (id)sender
+{
+    [self.treeController remove: sender];
+}
+
+- (IBAction) removeIndex: (id)sender
+{
+    NSUInteger indexes[2] = {0,1};
+    NSIndexPath *path = [NSIndexPath indexPathWithIndexes: indexes length: 2];
+    [self.treeController removeObjectAtArrangedObjectIndexPath: path];
+}
 @end
