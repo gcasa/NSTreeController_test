@@ -45,6 +45,7 @@ void DumpObjcMethods(Class clz) {
 @property (strong) IBOutlet NSOutlineView *ov;
 
 @property (strong) NSArray *nodes;
+@property NSMutableArray *selectionIndexPaths;
 
 @end
 
@@ -138,4 +139,10 @@ void DumpObjcMethods(Class clz) {
     NSIndexPath *path = [NSIndexPath indexPathWithIndexes: indexes length: 2];
     [self.treeController removeObjectAtArrangedObjectIndexPath: path];
 }
+
+- (void)outlineViewSelectionDidChange:(NSNotification *)notification
+{
+    NSLog(@"selectionIndexPaths = %@", self.selectionIndexPaths);
+}
+
 @end

@@ -15,6 +15,7 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <treeController childrenKeyPath="children" leafKeyPath="leaf" id="rsH-DC-Wv4">
             <connections>
+                <binding destination="Voe-Tx-rLC" name="selectionIndexPaths" keyPath="self.selectionIndexPaths" id="2So-Pu-m9H"/>
                 <binding destination="Voe-Tx-rLC" name="contentArray" keyPath="self.nodes" id="Au6-M4-dOz"/>
             </connections>
         </treeController>
@@ -704,7 +705,7 @@
                             <rect key="frame" x="1" y="1" width="438" height="291"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" headerView="Ys8-Am-0ol" indentationPerLevel="13" outlineTableColumn="i7V-26-VIq" id="Hlr-7c-WJT">
+                                <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" autosaveColumns="NO" rowHeight="24" headerView="Ys8-Am-0ol" indentationPerLevel="13" outlineTableColumn="i7V-26-VIq" id="Hlr-7c-WJT">
                                     <rect key="frame" x="0.0" y="0.0" width="438" height="263"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <size key="intercellSpacing" width="17" height="0.0"/>
@@ -747,6 +748,7 @@
                                     </tableColumns>
                                     <connections>
                                         <binding destination="rsH-DC-Wv4" name="content" keyPath="arrangedObjects" id="fRO-c6-Cq8"/>
+                                        <outlet property="delegate" destination="Voe-Tx-rLC" id="dck-Ad-fSS"/>
                                     </connections>
                                 </outlineView>
                             </subviews>
