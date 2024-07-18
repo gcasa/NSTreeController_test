@@ -15,8 +15,8 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <treeController childrenKeyPath="children" leafKeyPath="leaf" id="rsH-DC-Wv4">
             <connections>
-                <binding destination="Voe-Tx-rLC" name="selectionIndexPaths" keyPath="self.selectionIndexPaths" id="2So-Pu-m9H"/>
                 <binding destination="Voe-Tx-rLC" name="contentArray" keyPath="self.nodes" id="Au6-M4-dOz"/>
+                <binding destination="Voe-Tx-rLC" name="selectionIndexPaths" keyPath="self.selectionIndexPaths" id="2So-Pu-m9H"/>
             </connections>
         </treeController>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
