@@ -111,11 +111,14 @@ void DumpObjcMethods(Class clz) {
 
 - (IBAction) addChild: (id)sender
 {
-    id node = [self.treeController.selectedObjects objectAtIndex: 0];
-    NSLog(@"Selected %@", self.treeController.selectionIndexPath);
-    NSString *ckp = [self.treeController childrenKeyPathForNode: node];
-    NSLog(@"Count key path = %@", ckp);
-    [self.treeController addChild: sender];
+  if ([self.treeController.selectedObjects count] > 0)
+    {
+      id node = [self.treeController.selectedObjects objectAtIndex: 0];
+      NSLog(@"Selected %@", self.treeController.selectionIndexPath);
+      NSString *ckp = [self.treeController childrenKeyPathForNode: node];
+      NSLog(@"Count key path = %@", ckp);
+      [self.treeController addChild: sender];
+    }
 }
 
 - (IBAction) addIndex: (id)sender
