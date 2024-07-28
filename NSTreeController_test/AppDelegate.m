@@ -84,6 +84,7 @@ void DumpObjcMethods(Class clz) {
     NSLog(@"representedObject = %@" /*, value = %@" */, self.treeController.arrangedObjects.representedObject); // ,
           // self.treeController.arrangedObjects.representedObject.value);
     NSLog(@"objectClassName = %@", [self.treeController objectClass]);
+    NSLog(@"newObject = %@", [self.treeController newObject]);
     DumpObjcMethods([self.treeController.arrangedObjects class]);
 }
 
@@ -146,6 +147,7 @@ void DumpObjcMethods(Class clz) {
 - (void)outlineViewSelectionDidChange:(NSNotification *)notification
 {
     NSLog(@"selectionIndexPaths = %@", self.selectionIndexPaths);
+    NSLog(@"selectedObjects = %@", [self.treeController selectedObjects]);
 }
 
 @end
