@@ -82,10 +82,18 @@ void DumpObjcMethods(Class clz) {
     NSLog(@"arrangedObjects = %@, className = %@, superClass = %@",
           self.treeController.arrangedObjects, cn, sc);
     NSLog(@"representedObject = %@" /*, value = %@" */, self.treeController.arrangedObjects.representedObject); // ,
-          // self.treeController.arrangedObjects.representedObject.value);
+    // self.treeController.arrangedObjects.representedObject.value);
     NSLog(@"objectClassName = %@", [self.treeController objectClass]);
     NSLog(@"newObject = %@", [self.treeController newObject]);
+    
+    NSLog(@"=== Tree objects");
     DumpObjcMethods([self.treeController.arrangedObjects class]);
+    
+    NSLog(@"=== NSTreeController");
+    DumpObjcMethods([self.treeController class]);
+    
+    NSLog(@"=== NSOutlineView");
+    DumpObjcMethods([self.ov class]);
 }
 
 
