@@ -45,7 +45,7 @@ void DumpObjcMethods(Class clz) {
 @property (strong) IBOutlet NSOutlineView *ov;
 
 @property (strong) NSArray *nodes;
-@property NSMutableArray *selectionIndexPaths;
+@property (strong) NSMutableArray *selectionIndexPaths;
 
 @end
 

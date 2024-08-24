@@ -13,9 +13,9 @@
 {
     self = [super init];
     if (self) {
-        _value = value;
-        _children = [NSMutableArray array];
-        _leaf = NO;
+        self.value = value;
+        self.children = [NSMutableArray array];
+        self.leaf = NO;
     }
     return self;
 }
@@ -34,7 +34,7 @@
 - (NSString *) description
 {
   return [NSString stringWithFormat: @"%@ = <%@, %@, %@>",
-		   [super description], _value, _children, (_leaf?@"YES":@"NO")];
+          [super description], _value, _children, (_leaf?@"YES":@"NO")];
 }
 
 @end
